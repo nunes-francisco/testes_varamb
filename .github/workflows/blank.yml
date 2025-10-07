@@ -8,6 +8,7 @@ env:
   # Setting an environment variable with the value of a configuration variable
   USER_NAME: ${{ vars.MY_USER_NAME }}
   HOST_NAME: ${{ vars.MY_HOST }}
+  TESTE: isso é um teste
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -28,6 +29,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
+          echo ${{ env.TESTE }}
           echo "$USER_NAME"
           echo "$HOST_NAME"
           echo Add other actions to build,
