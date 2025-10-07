@@ -29,6 +29,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
+          echo ${{ vars.JOB_NAME }}
           echo ${{ env.TESTE }}
           echo "$USER_NAME"
           echo "$HOST_NAME"
